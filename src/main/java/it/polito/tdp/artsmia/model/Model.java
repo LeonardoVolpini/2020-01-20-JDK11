@@ -92,14 +92,12 @@ public class Model {
 		List<Artist> adiacenti= Graphs.neighborListOf(grafo, ultimo);
 		for (Artist a : adiacenti) {
 			if (!parziale.contains(a) && peso==-1) { //primo ciclo
-				System.out.println("ciao1");
 				parziale.add(a);
 				ricorsione(parziale, (int)grafo.getEdgeWeight(grafo.getEdge(ultimo, a)) );
 				parziale.remove(a);
 			}
 			else {
 				if(!parziale.contains(a) && this.grafo.getEdgeWeight(grafo.getEdge(ultimo, a))==peso ) {
-					System.out.println("ciao2");
 					parziale.add(a);
 					ricorsione(parziale, peso );
 					parziale.remove(a);
@@ -107,7 +105,6 @@ public class Model {
 			}
 		}
 		if(best==null || parziale.size()>best.size()) {
-			System.out.println("ciao3");
 			this.best= new ArrayList<>(parziale);
 		}
 	}

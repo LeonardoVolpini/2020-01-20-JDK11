@@ -84,9 +84,9 @@ public class ArtsmiaController {
     	}
     	this.txtResult.appendText("Percorso trovato:\n");
     	for(Artist a : percorso) {
-    		this.txtResult.appendText(a.getName()+"\n");
+    		this.txtResult.appendText(a.getName()+" - "+a.getId()+"\n");
     	}
-    	this.txtResult.appendText("con un totale di "+percorso.size()+"esposizioni");
+    	this.txtResult.appendText("con un totale di "+percorso.size()+" esposizioni");
 
     }
 
